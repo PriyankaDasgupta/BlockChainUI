@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head/>
+
+<h:body styleClass="body">
+<ui:composition template="BaseTemplateLogOff.xhtml">
+		<ui:define name="bodyForm"> 
+		<br />
+		<h:form>
+			<table align="left" width="70%">
+				<tr>
+					<td><h:outputText align="left" styleClass="fFormat" value="Welcome #{simpleLogin.textid.value}" /></td>
+				</tr>
+				<tr>
+					<th colspan="2"><h:outputText value="Search Result" styleClass="PageHeading"/></th>
+				</tr>
+			</table>
+			
+			<table align="left" width="70%" class="outline">
+				<tr><td width="50%"><h:outputText value="Candidate Details" styleClass="columnHeading"/></td></tr>
+				<tr>
+					<td><h:outputText value="Candidate Unique Id:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.candidateId}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="First Name:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.firstName}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Last Name:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.lastName}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="DOB:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.dob}" styleClass="fFormat"/>
+						<h:outputLabel value=" (dd/mm/yyyy)" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Gender" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.gender}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Email:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.email}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Address:" styleClass="fFormat"/></td>
+					<td><h:inputTextarea disabled="true" value="#{searchUser.address}" cols="20" rows="3"/></td>
+				</tr>
+			</table>
+			
+			<table align="left" width="70%"><tr><td>&nbsp;</td></tr></table>
+			
+			<table align="left" width="70%" class="outline">
+				<tr><td width="50%"><h:outputText value="Educational Details" styleClass="columnHeading"/></td></tr>
+				<tr>
+					<td><h:outputText value="Degree:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.degree}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Marks:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.marks}%" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Grade:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.grade}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Year:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.yop}" styleClass="fFormat"/>
+						<h:outputLabel value=" (yyyy-mm-dd)" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td><h:outputText value="University Name:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.university}" styleClass="fFormat"/></td>
+				</tr>
+			</table>
+			
+			<table align="left" width="70%"><tr><td>&nbsp;</td></tr></table>
+			
+			<table align="left" width="70%">	
+				<tr>
+					<td width="50%">&nbsp;</td>
+					<td>
+						<h:commandButton value="Back" action="search" styleClass="button"/>
+					</td>
+				</tr>
+			</table>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+    

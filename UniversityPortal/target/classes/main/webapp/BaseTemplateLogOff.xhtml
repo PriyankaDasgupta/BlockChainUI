@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title><h:outputText value="POC University Portal"/></title>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" /> 
+</h:head>
+
+<h:body styleClass="body">
+	<table border="0" bgcolor="#808080" align="top" width="100%" style="position: relative; height:60px">
+		<tr>
+			<td bgcolor="#000080" align="center">
+                	<h:outputText value="Welcome to WBUT University" style="font-size: 25pt; color: #ffffff; font-family: Arial Bold"/>
+				<br/>
+                	<h:outputText value="New Town, Kolkata - 700 056, West Bengal, India" style="font-size: 10pt; color: #ffffff; font-family: Arial"/>
+			</td>
+            <td bgcolor="white" align="left" width="180">
+            	<h:graphicImage alt="" value="resources/Images/UniversityLogo.png" width="180" height="120" style="right: auto" />
+			</td>
+		</tr>
+	</table>
+	<h:form>
+	<table border="0" bgcolor="#808080" width="100%" style="height:2px">
+		<tr>
+			<td><h:commandLink value="About Us" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Administration" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Academics" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Logout" style="font-size: 10pt; color: white; font-family: Arial" action="#{searchUser.logout}"/>
+			</td>
+		</tr>
+	</table>
+	<table align="left" style="border:1px solid black; height:555px" width="12%" bgcolor="white">
+		<tr>
+			<td valign="top" align="center"><br/><br/>
+			<h:commandLink value="Personal Details" action="personalDetails" styleClass="fFormat"/><br/><br/>
+			<h:commandLink value="Educational Details" action="#{searchUser.getEducationDetails}" styleClass="fFormat"/><br/><br/>
+			</td>
+		</tr>
+	</table>
+	</h:form>
+	<ui:insert name="bodyForm"/>
+</h:body>
+</html>

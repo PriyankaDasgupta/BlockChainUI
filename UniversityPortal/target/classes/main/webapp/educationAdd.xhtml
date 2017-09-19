@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" /> 
+</h:head>
+<h:body styleClass="body">
+<ui:composition template="BaseTemplateLogOff.xhtml">
+	<ui:define name="bodyForm"> 
+	<h:form>
+		<br/><br/>
+		<table align="center" width="80%">
+			<tr><td>
+				<table align="center" width="100%" style="height: 100px" class="outline">
+					<tr>
+						<td><h:outputText value="Degree" styleClass="fFormatHeading"/></td>
+						<td><h:inputText id="degree" value="#{searchUser.degree}" styleClass="fFormat" required="true" requiredMessage=" Please enter the degree"/>
+							<h:message for="degree" errorStyle="color:red;" styleClass="fFormat"/></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Marks (%)" styleClass="fFormatHeading"/></td>
+						<td><h:inputText id="marks" value="#{searchUser.marks}" styleClass="fFormat" required="true" requiredMessage=" Please enter the marks"/>
+							<h:message for="marks" errorStyle="color:red;" styleClass="fFormat"/></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Grade" styleClass="fFormatHeading"/></td>
+						<td><h:inputText id="grade" value="#{searchUser.grade}" styleClass="fFormat" required="true" requiredMessage=" Please enter the grade"/>
+							<h:message for="grade" errorStyle="color:red;" styleClass="fFormat"/></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Year" styleClass="fFormatHeading"/></td>
+						<td><h:inputText id="yop" value="#{searchUser.yop}" styleClass="fFormat" required="true" requiredMessage=" Please enter the year of passing"/>
+							<h:message for="yop" errorStyle="color:red;" styleClass="fFormat"/></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="University Name" styleClass="fFormatHeading"/></td>
+						<td><h:outputText value="WBUT" styleClass="fFormat"/></td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>
+						<h:commandButton value="Save" styleClass="button" action="#{searchUser.addNew}"/>
+						<h:commandButton value="Cancel" styleClass="button" action="educationDetails" immediate="true"/>
+					</td>
+				</tr>
+				</table>
+			</td></tr>
+		</table>
+	</h:form>
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

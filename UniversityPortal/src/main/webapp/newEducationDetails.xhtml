@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head/>
+<h:body styleClass="body">
+	<ui:composition template="BaseTemplateLogOff.xhtml">
+	<ui:define name="bodyForm"> 
+	<h:form>
+		<br/>
+		<br/>
+		<table id="table1" align="center" width="80%">
+			<tr>
+			<td><h:outputText styleClass="fFormat" value="Details of the candidate not found!!!"/></td>
+			</tr>
+			<tr>
+				<td><h:commandButton value="Add" styleClass="button" action="#{searchUser.addNewDetails}"/></td>
+			</tr>
+		</table>
+	</h:form>
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

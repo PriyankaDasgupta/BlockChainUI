@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title><h:outputText value="POC University Portal"/></title>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" /> 
+</h:head>
+
+<h:body styleClass="body">
+<h:form>
+	<table border="0" bgcolor="#808080" align="top" width="100%" style="position: relative; height:60px">
+		<tr>
+			<td bgcolor="#000080" align="center">
+                	<h:outputText value="Welcome to WBUT University" style="font-size: 25pt; color: #ffffff; font-family: Arial Bold"/>
+				<br/>
+                	<h:outputText value="New Town, Kolkata - 700 056, West Bengal, India" style="font-size: 10pt; color: #ffffff; font-family: Arial"/>
+			</td>
+            <td bgcolor="white" align="left" width="180">
+            	<h:graphicImage alt="" value="resources/Images/UniversityLogo.png" width="180" height="120" style="right: auto" />
+			</td>
+		</tr>
+	</table>
+	<table border="0" bgcolor="#808080" width="100%" style="height:2px">
+		<tr>
+			<td><h:commandLink value="About Us" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Administration" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Academics" style="font-size: 10pt; color: white; font-family: Arial"/>
+			| <h:commandLink value="Logout" style="font-size: 10pt; color: white; font-family: Arial" action="#{searchUser.logout}" immediate="true"/>
+			</td>
+		</tr>
+	</table>
+		<br />
+		<br />
+		<br />
+			<h:outputText styleClass="fFormat" value="Welcome" /> &nbsp;
+			<h:outputText id="name" styleClass="fFormat" value="#{simpleLogin.textid.value}" />
+			<table align="center" class="outline">
+				<tr>
+					<td colspan="2" align="center"><h:outputText value="Search Criteria" styleClass="PageHeading"/></td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Candidate Id: " styleClass="fFormat"/></td>
+					<td><h:inputText id="candidateid" value="#{searchUser.candidateId}" size="20" required="true" requiredMessage="  Please enter the Candidate Id"/>
+						<h:message for="candidateid" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<h:commandButton value="Search" action="#{searchUser.getPersonalDetails}" styleClass="button"/>
+					</td>
+				</tr>
+			</table>
+	</h:form>
+</h:body>
+</html>
+    
