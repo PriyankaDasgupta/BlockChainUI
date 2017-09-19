@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title><h:outputText value="POC Application"/></title>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" />
+</h:head>
+
+<h:body styleClass="body">
+	<h:form>
+			<table align="center" class="outline">
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Organization" styleClass="fFormat"/></td>
+					<td><h:outputText styleClass="fFormat" value="#{employmentDetails.organization}" size="20"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="DOJ (mm/dd/yyyy)" styleClass="fFormat"/></td>
+					<td><p:calendar style="font-family: Arial; font-size: 11px; font-weight: normal; box-shadow: none" value="#{employmentDetails.doj}" pattern="MM/dd/yyyy" showOn="button" valueChangeListener="#{employmentDetails.changeDoj}"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Designation" styleClass="fFormat"/></td>
+					<td><h:inputText id="designation" value="#{employmentDetails.designation}" size="20" required="true" requiredMessage="  Please enter the Designation"/>
+						<h:message for="designation" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="SkillSet" styleClass="fFormat"/></td>
+					<td><h:inputText id="skillSet" value="#{employmentDetails.skillSet}" size="20" required="true" requiredMessage="  Please enter the Skill Set"/>
+						<h:message for="skillSet" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Certification" styleClass="fFormat"/></td>
+					<td><h:inputText id="certification" value="#{employmentDetails.certification}" size="20"/></td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Salary in Rs." styleClass="fFormat"/></td>
+					<td><h:inputText id="salary" value="#{employmentDetails.salary}" size="20" required="true" requiredMessage="  Please enter the Salary"/>
+						<h:message for="salary" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="DOL (mm/dd/yyyy)" styleClass="fFormat"/></td>
+					<td><p:calendar value="#{employmentDetails.dol}" mindate="#{employmentDetails.doj}" pattern="MM/dd/yyyy" style="font-family: Arial; font-size: 11px; font-weight: normal; box-shadow: none" size="20" showOn="button" valueChangeListener="#{employmentDetails.changeDol}"/>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<h:commandButton value="Save" styleClass="button" action="#{employmentDetails.saveChanges}"/>
+						<h:commandButton value="Cancel" styleClass="button" action="resultEmployment" immediate="true"/>
+					</td>
+				</tr>
+			</table>
+			</h:form>
+		
+</h:body>
+</html>
+    

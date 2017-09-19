@@ -1,0 +1,121 @@
+@CHARSET "ISO-8859-1";
+.body {
+	background-color: lightblue;
+}
+
+.h1 {
+	color: white;
+	text-align: center;
+	font-family: cursive, sans-serif, fantasy;
+}
+
+.div {
+	height: 200px;
+	width: 50%;
+}
+
+.font {
+	font-family: verdana, Times, serif;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.input-text {
+	border: 2px solid red;
+	border-radius: 4px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+.button {
+	background-color: #000080;
+    border: medium;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonImg {
+	background: lightblue url('../Images/Edit.png') no-repeat scroll 5px center; 
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-color: lightblue;
+	box-shadow: none !important;
+	cursor: pointer;
+}
+
+.saveImg {
+	background: lightblue url('../Images/Save.png') no-repeat scroll center; 
+	width: 25px;
+	height: 25px;
+	border: none;
+	background-color: lightblue;
+	box-shadow: none !important;
+	cursor: pointer;
+}
+
+.clickAll {
+	display: block;
+}
+
+.round {
+    border: 2px solid red;
+    border-radius: 12px;
+}
+
+.fFormat
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0000a0;
+}
+
+.fFormatHeading
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0000a0;
+}
+
+.calendarClass {
+	border-radius: 0px;
+	box-shadow: none !important;
+	width: 10px !important;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 8px;
+	color: #0000a0;
+}
+
+table.outline, tr {
+    border: 1px solid white;
+    border-radius: 12px;
+	padding: 5px;
+}
+
+.tableborder {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.PageHeading
+{
+	padding: 5px;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.columnHeading
+{
+	padding: 5px;
+	font-style: italic;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</h:head>
+
+<h:body styleClass="body">
+	<ui:composition template="BaseTemplateLogOff.xhtml">
+		<ui:define name="bodyForm"> 
+		<br />
+		<br />
+		<br />
+			<h:outputText styleClass="fFormat" value="Welcome" /> &nbsp;
+			<h:outputText id="name" styleClass="fFormat" value="#{simpleLogin.userid}" />
+			<h:form>
+			<table align="center" class="outline">
+				<tr>
+					<td colspan="2" align="center"><h:outputText value="Search Criteria" styleClass="PageHeading"/></td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td align="left" width="200px"><h:outputText value="Candidate Id: " styleClass="fFormat"/></td>
+					<td><h:inputText id="candidateid" value="#{searchUser.candidateId}" size="20" required="true" requiredMessage="  Please enter the Candidate Id"/>
+						<h:message for="candidateid" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<h:commandButton value="Search" action="#{searchUser.getPersonalDetails}" styleClass="button"/>
+					</td>
+				</tr>
+			</table>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+    

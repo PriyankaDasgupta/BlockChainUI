@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head/>
+
+<h:body>
+<ui:composition template="BaseTemplateResult.xhtml">
+	<ui:define name="bodyForm"> 
+		<br />
+		<h:form>
+			<br/>
+			
+			<h:outputText align="center" value="Personal Details" styleClass="columnHeading"/>
+			<br/><br/><br/>
+			<table align="center" width="70%" class="outline">
+				<tr>
+					<td><h:outputText value="Candidate Id:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.candidateId}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="First Name:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.firstName}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Last Name:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.lastName}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="DOB:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.dob}" styleClass="fFormat"/>
+						<h:outputLabel value=" (dd/mm/yyyy)" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Gender" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.gender}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Email:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.email}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Unique Id Type:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.uniqueIdType}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Unique Id:" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{searchUser.uniqueIdNo}" styleClass="fFormat"/></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Address:" styleClass="fFormat"/></td>
+					<td><h:inputTextarea disabled="true" value="#{searchUser.address}" cols="20" rows="3"/></td>
+				</tr>
+			</table>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+    

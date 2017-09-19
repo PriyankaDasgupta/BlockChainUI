@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" />
+</h:head>
+
+<h:body styleClass="body">
+	<ui:composition template="BaseTemplate.xhtml">
+		<ui:define name="bodyForm"> 
+			<br />
+			<br />
+			<br />
+			<h:form>
+			<table align="center" class="outline">
+				<tr>
+					<td colspan="2"><h:outputText value="Please enter the login details" styleClass="fFormat"/></td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td width="100px"><h:outputText value="User ID:" styleClass="fFormat"/></td>
+					<td><h:inputText id="userid" value="#{simpleLogin.userid}" size="20" required="true" requiredMessage=" Please enter the User ID" />
+						<h:message for="userid" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td width="100px"><h:outputText value="Password:" styleClass="fFormat"/></td>
+					<td><h:inputSecret id="password" value="#{simpleLogin.password}" size="21" required="true" requiredMessage=" Please enter the password"/>
+						<h:message for="password" errorStyle="color:red;" styleClass="fFormat"/>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;
+					<!-- <h:graphicImage library="images" styleClass="buttonImg"/> -->
+					<!-- <p:commandButton styleClass="buttonImg" ajax="false" type="submit" actionListener="#{employment.setEmployment}" onclick="window.open('Employment.xhtml', 'mypopUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbar=no,resizable=no,copyhistory=yes,width=600,height=200');"/> -->
+					<!-- <h:commandLink immediate="true" onclick="window.open('Employment.xhtml', 'mypopUpWin', 'toolbar=no,copyhistory=yes,width=800,height=350');">
+						<h:graphicImage library="images" styleClass="buttonImg"/>
+					</h:commandLink> -->
+					</td>
+					<td>
+						<h:commandButton value="Login" action="#{simpleLogin.checkValidUser}" styleClass="button"/>
+					</td>
+				</tr>
+			</table>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

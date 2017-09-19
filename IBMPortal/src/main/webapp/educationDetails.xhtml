@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head/>
+
+<h:body>
+<ui:composition template="BaseTemplateResult.xhtml">
+	<ui:define name="bodyForm"> 
+		<br />
+		<h:form>
+			<br/>
+			
+			<h:outputText align="center" value="Education Details" styleClass="columnHeading"/>
+			
+			<br/><br/><br/>
+			<table align="center" width="70%" class="outline">
+				<tr>
+					<td><h:outputText value="Degree" styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Marks" styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Grade" styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Year" styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="University Name" styleClass="fFormatHeading"/></td>
+				</tr>
+				<ui:repeat var="eduDet" value="#{searchUser.eduDetails}" varStatus="loop">
+				<tr>
+					<td><h:outputText value="#{eduDet.degree}" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{eduDet.marks}%" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{eduDet.grade}" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{eduDet.yop}" styleClass="fFormat"/></td>
+					<td><h:outputText value="#{eduDet.university}" styleClass="fFormat"/></td>
+				</tr>
+				</ui:repeat>
+			</table>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+    

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title><h:outputText value="POC Application"/></title>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" /> 
+</h:head>
+
+<h:body styleClass="body">
+	<table border="0" bgcolor="white" align="top" width="100%" style="border:1px solid black; position: relative; height:5px">
+	<h:form>
+		<tr>
+			<td rowspan="2" bgcolor="white" align="left" width="150">
+            	<h:graphicImage alt="" value="resources/Images/IBMLogo.jpg" width="120" height="70" style="right: auto" />
+			</td>
+			<td bgcolor="white" align="center" width="50%" rowspan="2">
+            	<p style="font-size: 20pt; color: dark blue; font-family: Arial Rounded MT Bold">
+                	<h:outputText value="Employee Verification Portal"/>
+				</p>       
+			</td>
+			<td width="20%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><h:commandLink value="Login" style="font-size: 10pt; color: #800080; font-family: Arial"/>
+			| <h:outputLink value="https://www.ibm.com/ibm/in/en/" target="_blank">
+			<h:outputText value="About IBM" style="font-size: 10pt; color: dark blue; font-family: Arial"/></h:outputLink>
+			| <h:outputLink value="https://www.ibm.com/contact/in/en/?lnk=flg" target="_blank"> 
+			<h:outputText value=" Contact Us" style="font-size: 10pt; color: dark blue; font-family: Arial"/></h:outputLink>
+			</td>
+		</tr>
+		</h:form>
+	</table>
+	<ui:insert name="bodyForm"/>
+</h:body>
+</html>

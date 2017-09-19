@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title><h:outputText value="POC Application"/></title>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" /> 
+</h:head>
+
+<h:body styleClass="body">
+	<h:form>
+	<table style="border:1px solid black; position: relative; height:5px" bgcolor="white" align="top" width="100%">
+		<tr>
+			<td rowspan="2" bgcolor="white" align="left" width="150">
+            	<h:graphicImage alt="" value="resources/Images/IBMLogo.jpg" width="120" height="70" style="right: auto" />
+			</td>
+			<td bgcolor="white" align="center" width="50%" rowspan="2">
+            	<p style="font-size: 20pt; color: dark blue; font-family: Arial Rounded MT Bold">
+                	<h:outputText value="Employee Verification Portal"/>
+				</p>       
+			</td>
+			<td width="18%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><h:commandLink value="Logout" style="font-size: 10pt; color: #800080; font-family: Arial" action="#{searchUser.logout}"/>
+			| <h:commandLink value="Search" style="font-size: 10pt; color: #800080; font-family: Arial" action="search"/>
+			| <h:outputLink value="https://www.ibm.com/ibm/in/en/" target="_blank">
+			<h:outputText value="About IBM" style="font-size: 10pt; color: dark blue; font-family: Arial"/></h:outputLink>
+			| <h:outputLink value="https://www.ibm.com/contact/in/en/?lnk=flg" target="_blank"> 
+			<h:outputText value=" Contact Us" style="font-size: 10pt; color: dark blue; font-family: Arial"/></h:outputLink>
+			</td>
+		</tr>
+	</table>
+	<table align="left" style="border:1px solid black; height:555px" width="12%" bgcolor="white">
+		<tr>
+			<td valign="top" align="center"><br/><br/>
+			<h:commandLink value="Personal Details" action="personalDetails" styleClass="fFormat"/><br/><br/>
+			<h:commandLink value="Educational Details" action="#{searchUser.getEducationDetails}" styleClass="fFormat"/><br/><br/>
+			<h:commandLink value="Employment Details" action="#{employmentDetails.getEmploymentDetails}" styleClass="fFormat"/>
+			</td>
+		</tr>
+	</table>
+	</h:form>
+	<ui:insert name="bodyForm"/>
+</h:body>
+</html>

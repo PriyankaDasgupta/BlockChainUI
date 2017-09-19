@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head/>
+
+<h:body>
+		<h:form id="form">
+			<table align="center" width="80%">
+				<tr><td>
+				<table align="left" class="outline" width="100%" id="tableOutput">
+				<tr>
+					<td><h:outputText value="Organization " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="DOJ (mm/dd/yyyy) " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Designation " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="SkillSet " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Certification " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="Salary in Rs. " styleClass="fFormatHeading"/></td>
+					<td><h:outputText value="DOL (mm/dd/yyyy) " styleClass="fFormatHeading"/></td>
+				</tr>
+				<ui:repeat var="empDet" value="#{employmentDetails.empDetails}" varStatus="loop">
+				<tr id="id_#{loop.index}">
+					<td><h:outputText value="#{empDet.organization}" styleClass="fFormat" style="width:20"/></td>
+					<td><h:outputText value="#{empDet.doj}" styleClass="fFormat" style="width:20"> 
+					<f:convertDateTime pattern="MM/dd/yyyy" timeZone="IST" locale="en_US"/>
+					</h:outputText>
+					</td>
+					<td><h:outputText value="#{empDet.designation}" styleClass="fFormat" style="width:20"/>
+					</td>
+					<td><h:outputText value="#{empDet.skillSet}" styleClass="fFormat" style="width:20"/></td>
+					<td><h:outputText value="#{empDet.certification}" styleClass="fFormat" style="width:20"/></td>
+					<td><h:outputText value="#{empDet.salary}" styleClass="fFormat" style="width:20"/></td>
+					<td><h:outputText value="#{empDet.dol}" styleClass="fFormat" style="width:20">
+					<f:convertDateTime pattern="MM/dd/yyyy" timeZone="IST" locale="en_US"/></h:outputText>
+					</td>
+					<td><h:inputText value="#{empDet.count}" style="display:none"/></td>
+					<td>
+					<h:commandButton value="Edit" styleClass="button" action="#{employmentDetails.openEditPage(empDet.count)}" rendered="#{empDet.companyMatch}"/>
+					</td> 
+				</tr>
+				</ui:repeat>
+				</table>
+				</td></tr>
+				
+				<tr>
+				<td><h:commandButton value="Add" styleClass="button" action="#{employmentDetails.addNewAction}"/></td>
+				</tr>
+			</table>
+			
+			
+			</h:form>
+</h:body>
+</html>
+    
